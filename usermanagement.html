@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Management</title>
+    <link rel="stylesheet" href="dashboardstyles.css" />
+        <link rel="stylesheet" href="styles.css" />
+    <script src="reusableJS/header.js"></script>
+    <script src="reusableJS/sidebar.js"></script>
+  </head>
+  <body>
+    <!-- Append Header and Sidebar JS elements -->
+    <script>
+      const header = createHeader();
+      document.body.prepend(header);
+      const sidebar = createSidebar();
+      document.body.appendChild(sidebar);
+    </script>
+
+    <!-- HTML for Page -->
+    <main>
+      <h2>User Management</h2>
+      <p>Here, you can view and manage your authorized users.</p>
+      <!-- Form to add new member -->
+      <form>
+        <h2>Add New Member</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="role">Role:</label>
+        <select id="role" name="role" required>
+          <option>Owner</option>
+          <option>Manager</option>
+          <option>Employee</option>
+        </select>
+
+        <input type="submit" value="Add" />
+      </form>
+
+      <!-- Current authorized users list -->
+
+      <table>
+        <caption>
+          <h2>Current Authorized Users</h2>
+        </caption>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td>John Smith</td>
+          <td>john@example.com</td>
+          <td>Owner</td>
+          <td><button class="delete-btn">Remove</button></td>
+        </tr>
+        <tr>
+          <td>Jane Doe</td>
+          <td>jane@example.com</td>
+          <td>Manager</td>
+          <td><button class="delete-btn">Remove</button></td>
+        </tr>
+        <!-- Add more rows for each authorized user -->
+      </table>
+    </main>
+    <footer>
+      <p>&copy; 2023 Noverint</p>
+    </footer>
+  </body>
+</html>

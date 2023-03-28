@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="dashboardstyles.css" />
+	    <link rel="stylesheet" href="styles.css" />
+    <script src="reusableJS/header.js"></script>
+    <script src="reusableJS/sidebar.js"></script>
+  </head>
+  <body>
+    <!-- Append Header and Sidebar JS elements -->
+    <script>
+      const header = createHeader();
+      document.body.prepend(header);
+      const sidebar = createSidebar();
+      document.body.appendChild(sidebar);
+    </script>
+
+    <!-- HTML for Page -->
+    <main>
+      <section class="ai-section">
+        <h2>Noverint AI</h2>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Noverint</p>
+    </footer>
+  </body>
+</html>

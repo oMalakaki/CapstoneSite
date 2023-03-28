@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="dashboardstyles.css" />
+        <link rel="stylesheet" href="styles.css" />
+    <script src="reusableJS/header.js"></script>
+    <script src="reusableJS/sidebar.js"></script>
+  </head>
+  <body>
+    <!-- Append Header and Sidebar JS elements -->
+    <script>
+      const header = createHeader();
+      document.body.prepend(header);
+      const sidebar = createSidebar();
+      document.body.appendChild(sidebar);
+    </script>
+
+    <!-- HTML for Page -->
+    <main>
+      <section class="items-section">
+        <h2>Items</h2>
+        <p>Here, you can view and manage your inventory items.</p>
+
+        <a href="#">Add Item</a>
+
+        <!-- Table for list of all Items -->
+        <table>
+          <caption>
+            <h2>Current Items</h2>
+          </caption>
+          <!-- Headers for table -->
+          <tr>
+            <th>Item</th>
+            <th>No.</th>
+            <th>Quantity</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>Apples</td>
+            <td>#123456789</td>
+            <td>503</td>
+            <td>
+              <select class="moreactions-menu">
+                <option value="" disabled selected hidden>More Actions</option>
+                <option>Order More</option>
+                <option>Remove Item</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Bagels</td>
+            <td>#123456789</td>
+            <td>708</td>
+            <td>
+              <select class="moreactions-menu">
+                <option value="" disabled selected hidden>More Actions</option>
+                <option>Order More</option>
+                <option>Remove Item</option>
+              </select>
+            </td>
+          </tr>
+          
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Noverint</p>
+    </footer>
+  </body>
+</html>
