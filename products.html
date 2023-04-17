@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="styles.css" />
     <script src="reusableJS/header.js"></script>
     <script src="reusableJS/sidebar.js"></script>
+    
   </head>
   <body>
     <!-- Append Header and Sidebar JS elements -->
@@ -15,24 +16,29 @@
       document.body.prepend(header);
       const sidebar = createSidebar();
       document.body.appendChild(sidebar);
+
     </script>
 
     <!-- HTML for Page -->
     <main>
       <section class="items-section">
-        <h2>Items</h2>
-        <p>Here, you can view and manage your inventory items.</p>
+        <h2>Products</h2>
+        
+<!-- A search bar the user can use to search through the table -->
+        <input type="text" id="search" name="search" placeholder="Search for a product...">
+        
+<!-- A button that opens the modal.js to add a new product -->
+        <button class="add-product-button" onclick="openModal()">Add Product</button>
 
-        <a href="#">Add Item</a>
 
-        <!-- Table for list of all Items -->
+        <!-- Table for list of all Products -->
         <table>
           <caption>
-            <h2>Current Items</h2>
+            <h2>Current Products</h2>
           </caption>
           <!-- Headers for table -->
           <tr>
-            <th>Item</th>
+            <th>Product</th>
             <th>No.</th>
             <th>Quantity</th>
             <th></th>
@@ -45,7 +51,7 @@
               <select class="moreactions-menu">
                 <option value="" disabled selected hidden>More Actions</option>
                 <option>Order More</option>
-                <option>Remove Item</option>
+                <option>Remove Product</option>
               </select>
             </td>
           </tr>
@@ -57,7 +63,7 @@
               <select class="moreactions-menu">
                 <option value="" disabled selected hidden>More Actions</option>
                 <option>Order More</option>
-                <option>Remove Item</option>
+                <option>Remove Product</option>
               </select>
             </td>
           </tr>
