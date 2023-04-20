@@ -8,9 +8,9 @@
 main {
   padding-top: 6rem;
   min-height: 100vh;
-  margin-left: 20em;
-  padding-right: 2em;
-  max-width: 1200px;
+  margin-left: 19em;
+  padding-right: 1em;
+
 }
 
 body {
@@ -82,7 +82,7 @@ select {
   font-weight: normal;
   padding: 1em 3em 1em 1em;
 }
-input[type="text"],
+form input[type="text"],
 input[type="email"] {
   width: 100%;
   padding: 10px;
@@ -125,6 +125,9 @@ th {
 }
 
 td:last-child {
+  text-align: right;
+}
+th:last-child {
   text-align: right;
 }
 

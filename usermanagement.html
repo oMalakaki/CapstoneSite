@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>User Management</title>
+    <meta charset="UTF-8" />
+    <title>Inventory Management System</title>
     <link rel="stylesheet" href="dashboardstyles.css" />
-        <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="reusableJS/header.js"></script>
     <script src="reusableJS/sidebar.js"></script>
   </head>
@@ -17,54 +18,95 @@
     </script>
 
     <!-- HTML for Page -->
-    <main>
-      <h2>User Management</h2>
-      <p>Here, you can view and manage your authorized users.</p>
-      <!-- Form to add new member -->
-      <form>
-        <h2>Add New Member</h2>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
+    <main class="userManagement-page">
+      <section class="items-section">
+        <h2>User Management</h2>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-        <label for="role">Role:</label>
-        <select id="role" name="role" required>
-          <option>Owner</option>
-          <option>Manager</option>
-          <option>Employee</option>
-        </select>
+        <!-- search and button elements -->
+        <div class="search-and-button">
+          <!-- A search bar the user can use to search through the table -->
+          <input
+            type="text"
+            id="search"
+            name="search"
+            placeholder="Search for a User..."
+          />
 
-        <input type="submit" value="Add" />
-      </form>
+          <!-- A button that opens the modal.js to add a new User -->
+          <button class="open-modal-button">Add User</button>
+        </div>
+        
+        <!-- Modal for adding a new User -->
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add a New User</h2>
+            <form action="/action_page.php">
+              <label for="User-name">User Name</label>
+              <input
+                type="text"
+                id="user-name"
+                name="user-name"
+                placeholder="User Name"
+              />
 
-      <!-- Current authorized users list -->
+              <label for="user-number">User Number</label>
+              <input
+                type="text"
+                id="user-number"
+                name="user-number"
+                placeholder="User Number"
+              />
 
-      <table>
-        <caption>
-          <h2>Current Authorized Users</h2>
-        </caption>
-        <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Role</th>
-          <th></th>
-        </tr>
-        <tr>
-          <td>John Smith</td>
-          <td>john@example.com</td>
-          <td>Owner</td>
-          <td><button class="delete-btn">Remove</button></td>
-        </tr>
-        <tr>
-          <td>Jane Doe</td>
-          <td>jane@example.com</td>
-          <td>Manager</td>
-          <td><button class="delete-btn">Remove</button></td>
-        </tr>
-        <!-- Add more rows for each authorized user -->
-      </table>
+              <label for="User-quantity">User Quantity</label>
+              <input
+                type="text"
+                id="User-quantity"
+                name="User-quantity"
+                placeholder="User Quantity"
+              />
+
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
+        </div>
+        <!-- Table for list of all User Management -->
+        <table>
+
+          <!-- Headers for table -->
+          <tr>
+            <th>User</th>
+            <th>Role</th>
+
+            <th>Actions</th>
+          </tr>
+          <tr>
+            <td>John Doe</td>
+            <td>Owner</td>
+            <td>
+              •••
+            </td>
+          </tr>
+          <tr>
+            <td>John Doe</td>
+            <td>Owner</td>
+            <td>
+              •••
+            </td>
+          </tr>
+          <tr>
+            <td>John Doe</td>
+            <td>Owner</td>
+            <td>
+              •••
+            </td>
+          </tr>
+ 
+
+        </table>
+      </section>
     </main>
+    <script src="reusableJS/modalOpen.js"></script>
     <footer>
       <p>&copy; 2023 Noverint</p>
     </footer>
