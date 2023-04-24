@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="reusableJS/header.js"></script>
     <script src="reusableJS/sidebar.js"></script>
+    <script src="reusableJS/assistantModal.js"></script>
   </head>
   <body>
     <!-- Append Header and Sidebar JS elements -->
@@ -15,10 +16,12 @@
       document.body.prepend(header);
       const sidebar = createSidebar();
       document.body.appendChild(sidebar);
+      const assistantModal = createAssistantModal();
+      document.body.appendChild(assistantModal);
     </script>
 
     <!-- HTML for Page -->
-    <main class="products-page">
+    <main class="products-page css-transitions-only-after-page-load">
       <section class="items-section">
         <h2>Products</h2>
 
@@ -72,9 +75,7 @@
         </div>
         <!-- Table for list of all Products -->
         <table>
-          <caption>
-            <h2>Current Products</h2>
-          </caption>
+
           <!-- Headers for table -->
           <tr>
             <th>Product</th>

@@ -8,11 +8,170 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Poppins, sans-serif;
 }
 
 body {
   background-color: #fff;
   font-family: Poppins, sans-serif;
+}
+
+
+main {
+
+  transition: 0.3s;
+  padding-top: 6rem;
+  min-height: 100vh;
+  margin-left: 19em;
+  padding-right: 1em;
+
+}
+
+header {
+  z-index: 1000;
+  background-color: #3e64af;
+  color: #fff;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem 0 2rem;
+  justify-content: space-between;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header img {
+  width: 3rem;
+  filter: invert();
+  cursor: pointer;
+}
+
+header .rightSideDiv{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+header .rightSideDiv img:hover{
+  transform: scale(1.1);
+}
+
+
+section {
+  margin-bottom: 50px;
+}
+
+section h2 {
+  margin-bottom: 20px;
+}
+
+section p {
+  margin-bottom: 20px;
+}
+
+section a {
+  all: unset;
+  text-decoration: none;
+  color: var(--accent);
+}
+
+section button a{
+  all: unset;
+}
+section a:hover {
+
+  cursor: pointer;
+}
+
+
+
+
+/* Style for form */
+.login-container form {
+  margin: 20px 0;
+}
+
+.login-container  label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-container select {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: normal;
+  padding: 1em 3em 1em 1em;
+}
+
+.login-container form input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.login-container  input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.login-container input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Style for user list */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 2em;
+}
+
+table caption {
+  text-align: left;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+}
+
+td:last-child {
+  text-align: right;
+}
+th:last-child {
+  text-align: right;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
 }
 
 /* Login Page  */
@@ -66,13 +225,13 @@ font-size: 20px;
 
 
 
-form label {
+.login-container form label {
   display: block;
   margin-bottom: 10px;
   text-align: left;
 }
 
-form input[type="text"],
+.login-container  form input[type="text"],
 form input[type="password"] {
   all: unset;
   text-align: left;
@@ -87,7 +246,7 @@ form input[type="password"] {
   width: 100%;
 }
 
-form button[type="submit"] {
+.login-container  form button[type="submit"] {
   background-color: var(--accent);
   border: none;
   border-radius: 50px;
@@ -97,9 +256,6 @@ form button[type="submit"] {
   font-size: 16px;
   padding: 10px 20px;
   font-family: Poppins, sans-serif;
-}
-
-form button[type="submit"]:hover {
 }
 
 p {
@@ -120,6 +276,7 @@ footer p {
 
 /* Styles for sidebar nav menu */
 nav {
+  overflow: hidden;
   background-color: #333;
   color: #fff;
   height: 100%;
@@ -127,6 +284,9 @@ nav {
   position: fixed;
   top: 5rem;
   left: 0;
+  transition: 0.3s;
+
+
 }
 
 nav ul {
@@ -135,15 +295,21 @@ nav ul {
   padding: 0;
   display: flex;
   flex-direction: column;
+  
 
 }
 
 nav li:hover {
   background-color: #1c1c1c;
 }
+nav li {
+  white-space: nowrap;
+  text-overflow: hidden;
+}
 
 
 nav a {
+  
   color: #fff;
   text-decoration: none;
   font-size: 16px;
@@ -205,10 +371,9 @@ nav a.active img{
 
 .modal {
   position: fixed;
-  top: 0;
+  top: 5em;
   right: 0;
-  width: 30%;
-  min-width: 400px;
+  width: 400px;
   height: 100%;
   background-color: pink;
   padding: 20px;
@@ -228,7 +393,7 @@ nav a.active img{
 }
 
 #search {
-  width: 50%;
+  width: 25em;
   height: 100%;
   border-radius: 50px;
   border: 1px solid #ccc;
@@ -237,8 +402,16 @@ nav a.active img{
 
 .search-and-button{
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+.search-and-button div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
 }
 
 .open-modal-button {
@@ -249,5 +422,129 @@ nav a.active img{
   cursor: pointer;
   font-size: 16px;
   padding: 10px 20px;
+  font-family: Poppins, sans-serif;
+}
+
+/* assistant modal styles */
+#assistantModal {
+  position: fixed;
+  top: 5.25em;
+  right: -400px;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 90.25%;
+  background-color: white;
+
+  display: flex;
+  justify-content: top;
+
+  z-index: 100;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+#assistantModal h1 {
+  position: relative;
+  padding: .5rem;
+
+
+}
+
+#assistantModal #chatBot {
+  
+  position: relative;
+  height: 100%;
+
+  width: 100%;
+  overflow: scroll;
+  background-color: white;
+  border-radius: 0px 0px 10px 10px ;
+  border-top: 2px solid #ccc;
+  padding: 1em;
+  padding-bottom: 6em;
+
+}
+#assistantModal #chatBot #chatBotMessages {
+  
+  display: flex;
+  flex-direction: column;
+  gap: .5em
+
+}
+
+.css-transitions-only-after-page-load {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+
+/* css for assistant modal */
+#assistantModal form #inputAndSubmit {
+  position: absolute;
+  background-color: var(--accent); 
+  padding: 1em;
+  border-radius: 0px 0px 10px 10px ;
+  height: 5em;
+  display: flex;
+  border-top: 2px solid #ccc;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+}
+#assistantModal form #inputAndSubmit textarea{
+  resize: none;
+  width: 80%;
+
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: .5em;
+  font-size: .85rem;
+  font-family: Poppins, sans-serif;
+
+}
+
+#assistantModal form #inputAndSubmit button{
+
+  background-color: var(--accent);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+
+  font-family: Poppins, sans-serif;
+}
+#assistantModal #chatBot #chatBotMessages .chatBotMessage--chatbot {
+  background-color: var(--accent);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: .5em;
+  max-width: 75%;
+
+  font-size: 16px;
+
+
+  font-family: Poppins, sans-serif;
+}
+#assistantModal #chatBot #chatBotMessages .chatBotMessage--user {
+  background-color: grey;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: .5em;
+  max-width: 75%;
+  font-size: 16px;
+  align-self: flex-end;
+
   font-family: Poppins, sans-serif;
 }

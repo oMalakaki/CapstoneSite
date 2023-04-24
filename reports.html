@@ -7,6 +7,7 @@
 	    <link rel="stylesheet" href="styles.css" />
     <script src="reusableJS/header.js"></script>
     <script src="reusableJS/sidebar.js"></script>
+    <script src="reusableJS/assistantModal.js"></script>
   </head>
   <body>
     <!-- Append Header and Sidebar JS elements -->
@@ -15,10 +16,12 @@
       document.body.prepend(header);
       const sidebar = createSidebar();
       document.body.appendChild(sidebar);
+      const assistantModal = createAssistantModal();
+      document.body.appendChild(assistantModal);
     </script>
 
     <!-- HTML for Page -->
-    <main>
+    <main class="css-transitions-only-after-page-load">
       <section class="reports-section">
         <h2>Reports</h2>
         <p>Here, you can view important reports related to your inventory.</p>
@@ -26,7 +29,9 @@
         <a href="#">View Stock Report</a>
       </section>
     </main>
-
+    <script src="reusableJS/modalOpen.js" ></script>
+      
+    
     <footer>
       <p>&copy; 2023 Noverint</p>
     </footer>

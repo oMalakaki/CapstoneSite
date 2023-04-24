@@ -1,5 +1,7 @@
 function createSidebar() {
   const sidebar = document.createElement("nav");
+
+  sidebar.classList.add("css-transitions-only-after-page-load");
   const list = document.createElement("ul");
 
   const links = [
@@ -18,7 +20,7 @@ function createSidebar() {
     anchor.innerHTML = `
       <div style="display: flex; align-items: center;">
         <img src="${link.image}" alt="${link.text} icon" style="width: 2em; margin-right: 15px;">
-        <span>${link.text}</span>
+        <span id="navText">${link.text}</span>
       </div>
     `;
 
