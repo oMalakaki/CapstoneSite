@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Chat App</title>
+    <script src="./scripts/app.js"></script>
+  </head>
+  <body>
+    <div class="App">
+        <div >
+          <MainContainer>
+            <ChatContainer>       
+              <MessageList 
+
+              >
+                {messages.map((message, i) => {
+                  console.log(message)
+                  return <Message key={i} model={message} />
+                })}
+              </MessageList>
+              <MessageInput placeholder="Type message here" onSend={handleSend} />        
+            </ChatContainer>
+          </MainContainer>
+        </div>
+      </div>
+  </body>
+</html>

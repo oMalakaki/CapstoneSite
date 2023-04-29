@@ -2,6 +2,7 @@ function createSidebar() {
   const sidebar = document.createElement("nav");
 
   sidebar.classList.add("css-transitions-only-after-page-load");
+  
   const list = document.createElement("ul");
 
   const links = [

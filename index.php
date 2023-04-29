@@ -9,12 +9,12 @@
 	<section class="login-page">
 	<div class="login-container">
 		<h1>Sign in</h1>
-		<form >
+		<form method="POST" action="login.php">
 			<label for="Email">Email</label>
-			<input type="text" id="Email" name="Email" required>
+			<input type="text" id="email" name="email" required>
 			<label for="password">Password</label>
 			<input type="password" id="password" name="password" required>
-			<button type="submit" ><a href="dashboard.html">Sign in</a></button>
+			<button type="submit" value="Login">Sign in</button>
 		</form>
 		<p>Don't have an account? <a href="createAccount.html"><br />Create account</a></p>
 	</div>
