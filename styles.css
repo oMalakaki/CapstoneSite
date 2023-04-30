@@ -1,0 +1,610 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --accent: #3e64af;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  background-color: #fff;
+  font-family: Poppins, sans-serif;
+}
+
+
+main {
+
+  transition: 0.3s;
+  padding-top: 6rem;
+  min-height: 100vh;
+  margin-left: 19em;
+  padding-right: 1em;
+
+}
+
+header {
+  z-index: 1000;
+  background-color: #3e64af;
+  color: #fff;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem 0 2rem;
+  justify-content: space-between;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header img {
+  width: 3rem;
+  filter: invert();
+  cursor: pointer;
+}
+
+header .rightSideDiv{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+header .rightSideDiv img:hover{
+  transform: scale(1.1);
+}
+
+
+section {
+  margin-bottom: 50px;
+}
+
+section h2 {
+  margin-bottom: 20px;
+}
+
+section p {
+  margin-bottom: 20px;
+}
+
+section a {
+  all: unset;
+  text-decoration: none;
+  color: var(--accent);
+}
+
+section button a{
+  all: unset;
+}
+section a:hover {
+
+  cursor: pointer;
+}
+
+
+
+
+/* Style for form */
+.login-container form {
+  margin: 20px 0;
+}
+
+.login-container  label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-container select {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: normal;
+  padding: 1em 3em 1em 1em;
+}
+
+.login-container form input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.login-container  input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.login-container input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Style for user list */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 2em;
+}
+
+table caption {
+  text-align: left;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+}
+
+td:last-child {
+  text-align: right;
+}
+th:last-child {
+  text-align: right;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Login Page  */
+.login-page .login-container {
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.login-page .login-container h1 {
+font-weight: 800;
+font-size: 48px;
+}
+.login-page .login-container p {
+font-weight: 600;
+font-size: 20px;
+}
+.login-page .login-container label {
+font-weight: 400;
+font-size: 24px;
+}
+.login-page .login-container button {
+font-weight: 600;
+font-size: 20px;
+}
+
+.login-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+
+.login-page .noverint-text h1 {
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 64px;
+}
+.login-page .noverint-text p {
+  font-weight: 500;
+  font-size: 22px;
+}
+.login-page .noverint-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+.login-container form label {
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.login-container  form input[type="text"],
+form input[type="password"] {
+  all: unset;
+  text-align: left;
+
+  border: none;
+  border-bottom: 2px solid grey;
+
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+
+  width: 100%;
+}
+
+.login-container  form button[type="submit"] {
+  background-color: var(--accent);
+  border: none;
+  border-radius: 50px;
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  font-family: Poppins, sans-serif;
+}
+
+p {
+  margin-top: 20px;
+}
+
+/* styles for footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Styles for sidebar nav menu */
+nav {
+  overflow: scroll;
+  background-color: #333;
+  color: #fff;
+  height: 100%;
+  width: 18em;
+  position: fixed;
+  top: 5rem;
+  left: 0;
+  transition: 0.3s;
+
+
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  
+
+}
+
+nav li:hover {
+  background-color: #1c1c1c;
+}
+nav li {
+  white-space: nowrap;
+  text-overflow: hidden;
+}
+
+
+nav a {
+  
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 2rem;
+  display: flex;
+  width: 100%;
+  height: 7rem;
+
+
+}
+
+
+nav a.active {
+  font-weight: bold;
+  color: #3e64af;
+  background-color: #1c1c1c;
+  
+}
+nav a img {
+  filter: invert(1);
+}
+nav a.active img{
+  filter: invert(37%) sepia(21%) saturate(1668%) hue-rotate(182deg) brightness(95%) contrast(87%);
+}
+
+/*  Dashboard page */
+.dashboard-section .modules {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5%;
+  row-gap: 20px;
+}
+.dashboard-section .modules .mini-module {
+  width: 22.5%;
+  min-width: fit-content;
+  height: 100%;
+  background-color: red;
+  border-radius: 10px;
+  box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dashboard-section .modules .big-module {
+  width: 47.5%;
+  height: 200px;
+  background-color: red;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Modal styles */
+
+.modal {
+  position: fixed;
+  overflow: scroll;
+  top: 5em;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  display: none;
+  border-left: 2px solid #ccc;
+}
+.modal-content form{
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  
+  
+ 
+}
+.modal-content form .manual-product-div{
+
+  margin-top: 50%;
+  display: flex;
+  flex-direction: column;
+  
+  
+ 
+}
+.modal-content form .upload-barcode-div{
+
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  
+  
+ 
+}
+.modal .close{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#search {
+  width: 25em;
+  height: 100%;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+}
+
+.search-and-button{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-and-button div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+
+#open-modal-button {
+  background-color: var(--accent);
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  font-family: Poppins, sans-serif;
+}
+
+/* assistant modal styles */
+#assistantModal {
+  position: fixed;
+  top: 5.25em;
+  right: -400px;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 90.25%;
+  background-color: white;
+
+  display: flex;
+  justify-content: top;
+
+  z-index: 100;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+#assistantModal h1 {
+  position: relative;
+  padding: .5rem;
+
+
+}
+
+#assistantModal #chatBot {
+  
+  position: relative;
+  height: 100%;
+
+  width: 100%;
+  overflow: scroll;
+  background-color: white;
+  border-radius: 0px 0px 10px 10px ;
+  border-top: 2px solid #ccc;
+  padding: 1em;
+  padding-bottom: 6em;
+
+}
+#assistantModal #chatBot #chatBotMessages {
+  
+  display: flex;
+  flex-direction: column;
+  gap: .5em
+
+}
+
+.css-transitions-only-after-page-load {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+
+/* css for assistant modal */
+#assistantModal form #inputAndSubmit {
+  position: absolute;
+  background-color: var(--accent); 
+  padding: 1em;
+  border-radius: 0px 0px 10px 10px ;
+  height: 5em;
+  display: flex;
+  border-top: 2px solid #ccc;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+}
+#assistantModal form #inputAndSubmit textarea{
+  resize: none;
+  width: 80%;
+
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: .5em;
+  font-size: .85rem;
+  font-family: Poppins, sans-serif;
+
+}
+
+#assistantModal form #inputAndSubmit button{
+
+  background-color: var(--accent);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+
+  font-family: Poppins, sans-serif;
+}
+#assistantModal #chatBot #chatBotMessages .chatBotMessage--chatbot {
+  background-color: var(--accent);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: .5em;
+  max-width: 75%;
+
+  font-size: 16px;
+
+
+  font-family: Poppins, sans-serif;
+}
+#assistantModal #chatBot #chatBotMessages .chatBotMessage--user {
+  background-color: grey;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: .5em;
+  max-width: 75%;
+  font-size: 16px;
+  align-self: flex-end;
+
+  font-family: Poppins, sans-serif;
+}
+
+.bpw-floating-button{
+  background-image: url("https://img.icons8.com/ios-filled/50/000000/chat.png") !important;
+}
+
+#add-product-form-manual {
+  display: none;
+  flex-direction: column;
+  gap: .5em;
+}
+#add-product-form-manual div{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.modal .modal-content label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: .5em;
+}
+.modal .modal-content  {
+  border-top: 2px solid #ccc;
+  padding-top: 1em;
+  
+}
+
+.modal h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: .5em;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="dashboardstyles.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="reusableJS/header.js"></script>
+    <script src="reusableJS/sidebar.js"></script>
+    <script src="reusableJS/assistantModal.js"></script>
+  </head>
+  <body>
+    <!-- Append Header and Sidebar JS elements -->
+    <script>
+      const header = createHeader();
+      document.body.prepend(header);
+      const sidebar = createSidebar();
+      document.body.appendChild(sidebar);
+      const assistantModal = createAssistantModal();
+      document.body.appendChild(assistantModal);
+    </script>
+
+    <!-- HTML for Page -->
+    <main class="css-transitions-only-after-page-load">
+      <section class="dashboard-section">
+        <h2>Dashboard</h2>
+        <!-- Dashboard with 4 mini modules horizontally on top and 4 bigger modules 2x2 on bottom -->
+        <div class="modules">
+          <div class="mini-module">
+            <h3>Products in stock</h3>
+            <p>834</p>
+          </div>
+          <div class="mini-module">
+            <h3>Products in stock</h3>
+            <p>834</p>
+          </div>
+          <div class="mini-module">
+            <h3>Products in stock</h3>
+            <p>834</p>
+          </div>
+          <div class="mini-module">
+            <h3>Products in stock</h3>
+            <p>834</p>
+          </div>
+
+        
+   
+
+          <div class="big-module">
+            <h3>Product Performance</h3>
+
+          </div>
+          <div class="big-module">
+            <h3>Low Inventory Products</h3>
+
+          </div>
+          <div class="big-module">
+            <h3>Sales Data</h3>
+
+          </div>
+          <div class="big-module">
+            <h3>Noverint Assistant</h3>
+
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="reusableJS/modalOpen.js"></script>
+    <footer>
+      <p>&copy; 2023 Noverint</p>
+    </footer>
+  </body>
+</html>
