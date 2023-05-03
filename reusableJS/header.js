@@ -7,7 +7,7 @@ function createHeader() {
   logoContainer.classList.add("noverintLogo");
 
   const loginLink = document.createElement("a");
-  loginLink.href = "index.php";
+  loginLink.href = "dashboard.php";
   // Create logo image element
   const logoImg = document.createElement("img");
   logoImg.src = "./pictures/noverint.svg";
@@ -18,7 +18,7 @@ function createHeader() {
   accountIcon.src = "./pictures/icons/account.png";
   accountIcon.setAttribute("id", "accountIcon");
 
-  
+
 
   const assistantIcon = document.createElement("img");
   assistantIcon.src = "./pictures/icons/assistant.svg";
@@ -37,3 +37,4 @@ function createHeader() {
  
   return header;
 }
+

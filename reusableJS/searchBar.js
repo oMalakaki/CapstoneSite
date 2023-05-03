@@ -1,3 +1,5 @@
+//adding search bar functionality to tables
+//add event listener to search bar
 const searchBar = document.getElementById('search');
 searchBar.addEventListener('input', () => {
   searchTable(searchBar.value);

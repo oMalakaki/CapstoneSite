@@ -140,6 +140,8 @@
             echo "<script>alert('Error: " . $e->getMessage() . "'); window.location.href = 'usermanagement.php';</script>";
           }
         }
+
+        mysqli_close($con);
         ?>
 
 
@@ -149,6 +151,7 @@
   <script src="reusableJS/modalOpen.js"></script>
   <script src="reusableJS/searchBar.js"></script>
   <script src="reusableJS/viewDetails.js"></script>
+  <script src="reusableJS/signOut.js"></script>
 
 
 

@@ -31,6 +31,7 @@ header {
   z-index: 1000;
   background-color: #3e64af;
   color: #fff;
+  border-bottom: 2px solid grey;
   height: 5rem;
   position: fixed;
   top: 0;
@@ -336,7 +337,14 @@ nav a.active img{
 }
 
 /*  Dashboard page */
-.dashboard-section .modules {
+.dashboard-section .modules .mini-module-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5%;
+  row-gap: 20px;
+  margin-bottom: 20px;
+}
+.dashboard-section .modules .big-module-container{
   display: flex;
   flex-wrap: wrap;
   gap: 2.5%;
@@ -346,26 +354,124 @@ nav a.active img{
   width: 22.5%;
   min-width: fit-content;
   height: 100%;
-  background-color: red;
+  background-color: var(--accent);
+  color:white;
+  border: 2px solid grey;
   border-radius: 10px;
   box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  gap: 1em;
+  justify-content: left;
   align-items: center;
+  position: relative;
+  padding: 1em;
 }
+.dashboard-section .modules .mini-module div {
+  
+  display: flex;
+  flex-direction: column;
+  
+
+  position: relative;
+}
+.dashboard-section .modules .mini-module img{
+  filter: invert();
+  width: 3em;
+}
+.dashboard-section .modules .mini-module div p{
+
+  all: unset;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.dashboard-section .modules .big-module .mini-module {
+  border: none;
+  background-color: #FF8533;
+  width: 33%;
+  height: 5em;
+  box-shadow: none;
+  min-width: 0;
+  overflow: hidden;
+
+}
+.dashboard-section .modules .big-module #chatbot {
+  width: 30em;
+  height: 100%;
+  
+  position: relative;
+
+}
+
+.dashboard-section .modules .big-module #new-tip-btn {
+  all:unset;
+  cursor: pointer;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  background-color: var(--accent);
+  color: white;
+  border-radius: 10px;
+  padding: 1em;
+
+
+}
+.dashboard-section .modules .low-inventory-module {
+  display: flex;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  gap: .3%;
+  row-gap: 5px;
+  width: 100%;
+  overflow: scroll;
+  max-height: 20em;
+  
+
+}
+.dashboard-section .modules .big-module .mini-module div h2{
+
+  font-size: 1em;
+  margin-bottom: 0;
+
+}
+
+.dashboard-section .modules .big-module .mini-module div p{
+
+  font-size: 1em;
+  
+}
+.dashboard-section .modules .big-module .mini-module img{
+
+  width: 2em;
+  
+}
+
+
+
+
 .dashboard-section .modules .big-module {
   width: 47.5%;
-  height: 200px;
-  background-color: red;
+  min-width: fit-content;
+  height: 20em;
+  position: relative;
+  
+  padding: 1em;
+  border: 2px solid grey;
+  background-color: white;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  
+ 
   gap: 10px;
+  overflow: hidden;
 }
+.dashboard-section .modules .big-module #chart-div{
+  height: 100%;
+  width: 100%;
+}
+
 
 /* Modal styles */
 
@@ -384,6 +490,7 @@ nav a.active img{
   z-index: 100;
   display: none;
   border-left: 2px solid #ccc;
+  padding-bottom: 5em;
 }
 .modal-content form{
 
@@ -595,7 +702,10 @@ nav a.active img{
 .modal .modal-content label {
   font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: .5em;
+  margin-bottom: .25em;
+}
+.modal .modal-content p {
+  margin-top:0;
 }
 .modal .modal-content  {
   border-top: 2px solid #ccc;
@@ -607,4 +717,27 @@ nav a.active img{
   font-size: 2rem;
   font-weight: 800;
   margin-bottom: .5em;
+}
+
+#signOutDiv {
+  position: absolute;
+  top: 5em;
+  right: 0;
+  border: 2px solid grey;
+  border-top: 2px none;
+
+  background-color: var(--accent);
+  
+}
+
+#signOutButton {
+  background-color: #0000;
+
+  border: none;
+ 
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  font-family: Poppins, sans-serif;
 }

@@ -9,11 +9,16 @@
   <script src="reusableJS/header.js"></script>
   <script src="reusableJS/sidebar.js"></script>
   <script src="reusableJS/assistantModal.js"></script>
+
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 
 </head>
 
 <body>
+
+<?php
+        include("databaseconnect.php");
+        ?>
   <!-- Append Header and Sidebar JS elements -->
   <script>
     const header = createHeader();
@@ -107,7 +112,7 @@
           <th>Actions</th>
         </tr>
         <?php
-        include("databaseconnect.php");
+   
         // sql query to select all from product table
         $sql = "SELECT * FROM product";
         $result = mysqli_query($con, $sql);
@@ -180,8 +185,6 @@ if (isset($_POST['submit-product'])) {
 }
 
 mysqli_close($con);
-
-
         ?>
 
       </table>
@@ -191,6 +194,9 @@ mysqli_close($con);
   <script src="reusableJS/searchBar.js"></script>
   <script src="reusableJS/barcode.js"></script>
   <script src="reusableJS/viewDetails.js"></script>
+  <script src="reusableJS/signOut.js"></script>
+  
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
   <footer>
     <p>&copy; 2023 Noverint</p>

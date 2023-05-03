@@ -6,11 +6,11 @@ function createSidebar() {
   const list = document.createElement("ul");
 
   const links = [
-    { href: "dashboard.html", text: "Dashboard", image: "pictures/icons/dashboard.svg" },
+    { href: "dashboard.php", text: "Dashboard", image: "pictures/icons/dashboard.svg" },
     { href: "products.php", text: "Products", image: "pictures/icons/ad_product.svg" },
     { href: "sales.php", text: "Sales", image: "pictures/icons/coins.svg" },
     { href: "orders.php", text: "Orders", image: "pictures/icons/dollar.svg" },
-    { href: "reports.html", text: "Reports", image: "pictures/icons/report.svg" },
+  
     { href: "usermanagement.php", text: "User Management", image: "pictures/icons/users.svg" },
   ];
   

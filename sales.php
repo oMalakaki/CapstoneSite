@@ -8,6 +8,7 @@
     <script src="reusableJS/header.js"></script>
     <script src="reusableJS/sidebar.js"></script>
     <script src="reusableJS/assistantModal.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
   </head>
   <body>
     <!-- Append Header and Sidebar JS elements -->
@@ -22,7 +23,12 @@
 
     <!-- HTML for Page -->
     <main class="css-transitions-only-after-page-load">
-  
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <h2></h2>
+        <div class="modal-content">
+</div>
+</div>
         
       <section class="sales-section">
         <h2>Sales</h2>
@@ -50,33 +56,32 @@
             <th>Sale</th>
             <th>Actions</th>
           </tr>
-          <tr>
-            <td>1/3/23</td>
-            <td>#123456789</td>
+          <!-- php to get all sales from sales table -->
+          <?php 
+          include("databaseconnect.php");
+          $sql = "SELECT * FROM sales";
+          $result = mysqli_query($con, $sql);
+          if ($result->num_rows > 0) {
+            // while loop to display all rows from database
+            while ($row = $result->fetch_assoc()) {
   
-            <td>$2.09</td>
-            <td>
-              •••
-            </td>
-          </tr>
-          <tr>
-            <td>1/3/23</td>
-            <td>#123456789</td>
-  
-            <td>$2.09</td>
-            <td>
-              •••
-            </td>
-          </tr>
-          <tr>
-            <td>1/3/23</td>
-            <td>#123456789</td>
-  
-            <td>$2.09</td>
-            <td>
-              •••
-            </td>
-          </tr>
+              echo "<tr><td>" . $row["Date"] . "</td><td>" . $row["sale_id"] . "</td><td>" . "$" . $row["Sale"] . "</td><td>" ;
+              echo "<form method='POST' action=''>";
+              echo "<input type='hidden' name='sale_id' value='" . $row["sale_id"] . "'>";
+              echo "<select name='select' >";
+              echo "<option value='default'>Select an option</option>";
+              echo "<option value='view-details' data-sale-number='" . $row["sale_id"] . "'>View Details</option>";
+              echo "</select>";
+              echo "</form>";
+              echo "</td></tr>";
+
+            }
+          } else {
+            echo "0 results";
+          } 
+
+          mysqli_close($con);
+          ?>
 
 
         </table>
@@ -84,6 +89,8 @@
     </main>
     <script src="reusableJS/modalOpen.js"></script>
     <script src="reusableJS/searchBar.js"></script>
+    <script src="reusableJS/viewDetails.js"></script>
+    <script src="reusableJS/signOut.js"></script>
 
     <footer>
       <p>&copy; 2023 Noverint</p>

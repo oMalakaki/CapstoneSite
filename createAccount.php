@@ -9,7 +9,7 @@
 	<section class="login-page">
 	<div class="login-container">
 		<h1>Create Account</h1>
-		<form id="create-account" method="POST" action="login.php">
+		<form id="create-account" method="POST" action="login.php" onsubmit="return validateForm()">
 			<label for="email">Email</label>
 			<input type="text" id="email" name="email" required>
 			<label for="password">Password</label>
@@ -28,5 +28,16 @@
 	</div>
 	</section>
 	<script src="reusableJS/modalOpen.js"></script>
+	<script>
+		function validateForm() {
+			var password = document.getElementById("password").value;
+			var confirmPassword = document.getElementById("re-password").value;
+			if (password != confirmPassword) {
+				alert("Passwords do not match. Please try again.");
+				return false;
+			}
+			return true;
+		}
+	</script>
 </body>
 </html>
